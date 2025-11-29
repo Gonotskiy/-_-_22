@@ -62,16 +62,7 @@
             <!-- Добавь форму, если хочешь: <form action="/submit" method="post">...</form> -->
         </section>
 <section id="contact" class="hidden">
-    <h2>Свяжитесь с нами</h2>
-   <form id="contact-form" action="https://formspree.io/f/xgvjbzbp" method="POST">
-    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input type="email" id="email" name="email" placeholder="Email" required>
-    <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
-    <button type="submit">Отправить</button>
-</form>
-
-</section>
-
+    
 
     </main>
 <footer>
@@ -88,44 +79,23 @@
         });
     });
 </script>
+<form id="contact-form">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>  <!-- ID должен совпадать с JS -->
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <button type="submit">Отправить</button>  <!-- Это вызовет sendEmail -->
+</form>
 
-<script>
-// Анимации при скролле
-const sections = document.querySelectorAll('.hidden');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
-sections.forEach(section => observer.observe(section));
-
-// Обработка формы
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();  // Останавливаем стандартную отправку
-    const form = e.target;
-    fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Спасибо! Мы свяжемся с вами быстрее, чем адвокат находит лазейку в законе.');
-            form.reset();  // Очищаем форму
-        } else {
-            alert('Ошибка отправки. Попробуйте позже или свяжитесь напрямую.');
-        }
-    })
-    .catch(error => {
-        alert('Ошибка сети. Проверьте интернет и попробуйте снова.');
-        console.error('Ошибка:', error);  // Для отладки
-    });
-});
-</script>
-
+ <!-- Подключаем библиотеку EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Подключаем твой скрипт (убедись, что путь правильный: если script.js в той же папке, то просто 'script.js') -->
+    <script src="script.js"></script>
 </body>
 </html>
