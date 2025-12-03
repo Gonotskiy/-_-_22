@@ -12,9 +12,9 @@
         <nav>
             <ul>
                 <li><a href="#home">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
+                <li><a href="#prices">Услуги</a></li>
                 <li><a href="#about">О нас</a></li>
-                <li><a href="#news">Новости нашей компании</a></li>
+                <li><a href="#news">Новости из практики нашей компании</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
@@ -26,15 +26,98 @@
             <p>Мы помогаем решать проблемы, которые кажутся неразрешимыми, как поиск смысла жизни в галактике. Консультации по всем вопросам права.</p>
         </section>
 
-        <section id="services">
-            <h2><i class="fas fa-file-contract"></i> Наши Услуги</h2>
-            <ul>
-                <li>Гражданское право — для тех, кто спорит с соседями по поводу забора.</li>
-                <li>Корпоративное право — для бизнесменов, мечтающих о империи.</li>
-                <li>Семейное право — потому что семья — это тоже мини-галактика.</li>
-                <li>И многое другое — спросите, и мы разберёмся, как в хорошем квесте!</li>
-            </ul>
-        </section>
+        <section id="prices">
+    <h2><i class="fas fa-gavel"></i> Услуги</h2>
+    <p>Мы работаем на результат! Именно поэтому Вы сами выбираете удобный для Вас вариант оплаты услуг:</p>
+    
+    <!-- Таблица с ценами -->
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Наименование услуг</th>
+                <th>Цена* (руб.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Устная консультация</td>
+                <td>Бесплатно</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Письменная консультация</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Правовая экспертиза договоров и соглашений</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Составление жалоб и претензий</td>
+                <td>3000-5000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Составление договоров и соглашений</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Составление искового заявления с приложением</td>
+                <td>3000-5000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Составление возражений на исковое заявление</td>
+                <td>5000-10000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Ознакомление с материалами гражданского, административного дела</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Представление интересов в судебном заседании суда первой инстанции (за все заседания)</td>
+                <td>20000-30000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Представление интересов в судебном заседании апелляционной инстанции (за все заседания)</td>
+                <td>20000-30000</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Представление интересов в службе судебных приставов (исполнительное производство)</td>
+                <td>10000</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Важная информация -->
+    <div class="important-info">
+        <h3>Важно знать</h3>
+        <ul>
+            <li>Судебные расходы, которые вы несёте при обращении в суд, взыскиваются с ответчика.</li>
+            <li>Оказание юридических услуг Представителя (Поверенный) и Клиента (Доверитель) оформляется договором.</li>
+            <li>Представление интересов в суде осуществляется на основании нотариальной доверенности, что освобождает Вас от участия в гражданском процессе в большинстве случаев.</li>
+            <li>В случае заключения договора на оказание юридических услуг в рамках судебного разбирательства клиент получает не только своего представителя в гражданском процессе, но и ряд дополнительных услуг:</li>
+        </ul>
+                <ul class="sub-list">
+            <li><strong>юридическая консультация по всем вопросам дела в неограниченном количестве;</strong></li>
+            <li><strong>написание заявления об ознакомлении с материалами дела;</strong></li>
+            <li><strong>составление ходатайств и заявлений, включая назначение экспертизы; вызов в суд свидетелей, специалистов, экспертов и т.д.;</strong></li>
+            <li><strong>разработка правовой позиции и сбор необходимых доказательств по делу для написания претензии, искового заявления, возражений, частных жалоб и т.д.</strong></li>
+        </ul>
+
+        <p>*Цены на юридические услуги указаны с учетом обычного уровня сложности дел.</p>
+    </div>
+</section>
+
 
         <section id="about">
             <h2><i class="fas fa-balance-scale"></i> О нас</h2>
@@ -54,47 +137,84 @@
         </section>
 
         <section id="contacts">
-            <h2><i class="fas fa-shield-alt"></i> Контакты</h2>
-            <p>Телефон: +7 (983)600-35-91</p>
-            <p>Email: miller.359@mail.ru </p>
-            <p>Местонахождение: г. Барнаул и Алтайский край </p>
-            <!-- Добавь форму, если хочешь: <form action="/submit" method="post">...</form> -->
-        </section>
-<section id="contact" class="hidden">
+    <h2><i class="fas fa-shield-alt"></i> Контакты</h2>
+    <p>Телефон: +7 (983)600-35-91</p>
+    <p>Email: miller.359@mail.ru</p>
+    <p>Местонахождение: г. Барнаул и Алтайский край</p>
     
+    <!-- Добавляем социальные сети -->
+    <div class="social-links">
+        <a href="https://wa.me/79836003591" target="_blank" title="Написать в WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/tvoy_username" target="_blank" title="Написать в Telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+        <a href="https://vk.com/tvoy_id" target="_blank" title="Профиль в VKontakte">
+            <i class="fab fa-vk"></i> VKontakte
+        </a>
+        <a href="https://max.app/tvoy_username" target="_blank" title="Профиль в Max">
+            <i class="fas fa-user"></i> Max
+        </a>  <!-- Если Max — это не платформа, замени на реальную ссылку -->
+    </div>
+    
+    <!-- Добавь форму, если хочешь: <form action="/submit" method="post">...</form> -->
+</section>
 
+
+        <section id="contact" class="hidden">
+            <form id="contact-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>  <!-- ID должен совпадать с JS -->
+                
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Отправить</button>  <!-- Это вызовет sendEmail -->
+            </form>
+        </section>
     </main>
-<footer>
+    <footer>
         <p>&copy; 2025 Ваша Юридическая Консультация. Все права защищены. (Или почти все — в галактике права могут быть относительными, как скорость света.)</p>
     </footer>
-<script>
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                section.classList.add('visible');
-            }
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
         });
-    });
-</script>
-<form id="contact-form">
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name" required>  <!-- ID должен совпадать с JS -->
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="message">Сообщение:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    <button type="submit">Отправить</button>  <!-- Это вызовет sendEmail -->
-</form>
-
- <!-- Подключаем библиотеку EmailJS -->
+    </script>
+    <!-- Подключаем библиотеку EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
-    <!-- Подключаем твой скрипт (убедись, что путь правильный: если script.js в той же папке, то просто 'script.js') -->
-    <script src="script.js"></script>
+    <!-- Скрипт для отправки формы через EmailJS -->
+    <script>
+        (function() {
+            emailjs.init("ZesbRxMI5g0ZSYcEx"); // Замени на твой публичный ключ из EmailJS (получи его на emailjs.com)
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+            emailjs.sendForm('Legal_services.22', 'template_qmzsrxb', this) // Замени на твои SERVICE_ID и TEMPLATE_ID из EmailJS
+                .then(function(response) {
+                    alert('Сообщение отправлено успешно!');
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    alert('Ошибка при отправке: ' + JSON.stringify(error));
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
 </body>
 </html>
