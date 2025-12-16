@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Юридическая Защита в Барнауле | Гарантия Результата | Алтайский край</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридическая Защита в Барнауле | Гарантия Результата | Алтайский край</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #004d40; /* Темно-зеленый (Бутылочный) */
+            --accent-color: #ffc107; /* Золотой/Янтарный для акцента */
+            --text-color: #212529;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
 
-    <style>
-        /* CSS для демонстрации "дорогого" стиля: темно-зеленый + акцент */
-        :root {
-            --primary-color: #004d40; /* Темно-зеленый (Бутылочный) */
-            --accent-color: #ffc107; /* Золотой/Янтарный для акцента */
-            --text-color: #212529;
-            --light-bg: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-color);
-            margin: 0;
-            line-height: 1.6;
-        }
+        header, footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
 
-        header, footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0 20px;
+            transition: color 0.3s;
+        }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0 20px;
-            transition: color 0.3s;
-        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
-        nav a:hover {
-            color: var(--accent-color);
-        }
+        section {
+            padding: 80px 5%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
 
-        section {
-            padding: 80px 5%;
-            text-align: center;
-        }
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
 
-        /* НОВЫЕ СТИЛИ ДЛЯ ФОНА #HOME */
-        #home {
-            /* Добавляем цвет, который будет виден, если изображение не загрузилось */
+        #home {
             background-color: var(--primary-color); 
-            /* Используем Фото 1 как фон. Добавляем !important для проверки */
-            background-image: url('123.jpg') !important; 
+            background-image: url('123.jpg') !important; 
             background-size: cover; 
             background-position: center top; 
             background-attachment: fixed;
             position: relative; 
             z-index: 1; 
-            color: white; 
-            min-height: 65vh; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+            color: white; 
+            min-height: 65vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         
-        /* Создаем темный оверлей для читаемости текста */
         #home::before {
             content: '';
             position: absolute;
@@ -82,138 +84,138 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* УСИЛИЛИ ЗАТЕМНЕНИЕ ДО 0.85 */
             background-color: rgba(0, 77, 64, 0.85); 
             z-index: 2;
         }
 
-        /* Контент должен быть над оверлеем */
         #home h1, #home p, #home a {
             position: relative;
             z-index: 3; 
         }
-        /* Конец НОВЫХ СТИЛЕЙ */
 
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
 
-        h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
+        h2 {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 30px;
-            font-size: 1.1em;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
 
-        .cta-button:hover {
-            background-color: #ffdb58; 
-            transform: translateY(-2px);
-        }
+        .cta-button:hover {
+            background-color: #ffdb58; 
+            transform: translateY(-2px);
+        }
 
-        /* Стиль для секций с заголовками */
-        h2 {
-            font-size: 2em;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+        .case-studies-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
 
-        .case-studies-container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
-        }
+        .case-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            max-width: 350px;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
 
-        .case-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-left: 5px solid var(--accent-color);
-            padding: 20px;
-            max-width: 300px;
-            text-align: left;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
 
-        .case-card:hover {
-            transform: translateY(-5px);
-        }
+        .doc-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+        }
 
-        .case-result {
-            font-weight: 700;
-            color: var(--primary-color);
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
-        
-        /* Таблица цен */
-        .price-table {
-            width: 80%;
-            margin: 40px auto;
-            border-collapse: collapse;
-            text-align: left;
-        }
-        .price-table th, .price-table td {
-            border: 1px solid #ddd;
-            padding: 12px 15px;
-        }
-        .price-table thead tr {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        .price-table tbody tr:nth-child(even) {
-            background-color: var(--light-bg);
-        }
-        
-        /* Форма */
-        #contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-            background: white;
-            padding: 30px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-        #contact-form input, #contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        #contact-form button {
-            width: 100%;
-            border: none;
-            cursor: pointer;
-        }
-        
-        /* Соц. ссылки */
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: var(--primary-color);
-            margin: 0 10px;
-            font-size: 1.1em;
-            text-decoration: none;
-        }
+        .case-result {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        
+        .price-table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+        }
+        .price-table thead tr {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .price-table tbody tr:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        #contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #contact-form button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
 
-        /* СТИЛИ ДЛЯ СЕКЦИИ О НАС (ФОТО 2) */
         .about-image {
             width: 100%;
             max-width: 300px; 
@@ -221,7 +223,7 @@
             border-radius: 8px; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-            border: 3px solid var(--accent-color); /* Золотая рамка */
+            border: 3px solid var(--accent-color);
         }
         .about-content-container {
             display: flex;
@@ -237,220 +239,186 @@
                 gap: 40px;
              }
         }
-        
-        /* Плавное появление (для скрипта) */
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-    </style>
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#advantages">Преимущества</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#cases">Кейсы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#education">Документы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main>
-                <section id="home">
-            <h1>Защитим ваше спокойствие. <br> Юридическая защита в Барнауле и Алтайском крае.</h1>
-            <p>Мы берем на себя всю бюрократию. Гарантируем результат по договору или вернем деньги за услуги.</p>
-            <a href="#contact" class="cta-button">Начать. Получить Бесплатный Анализ Дела за 30 Минут</a>
-        </section>
+    <main>
+        <section id="home">
+            <h1>Защитим ваше спокойствие. <br> Юридическая защита в Барнауле и Алтайском крае.</h1>
+            <p>Мы берем на себя всю бюрократию. Гарантируем результат по договору или вернем деньги за услуги.</p>
+            <a href="#contact" class="cta-button">Начать. Получить Бесплатный Анализ Дела за 30 Минут</a>
+        </section>
 
-        <section id="advantages" style="background-color: var(--light-bg);">
-            <h2><i class="fas fa-check-circle"></i> Три Принципа Нашей Работы</h2>
-            <div class="case-studies-container">
-                <article class="case-card">
-                    <h3>Прозрачный Прайс и Гарантия</h3>
-                    <p>Конечная стоимость в договоре. Вы точно знаете, сколько и за что платите. Без скрытых доплат и неприятных сюрпризов.</p>
-                </article>
-                <article class="case-card">
-                    <h3>Экономия Времени и Нервов</h3>
-                    <p>Ваше присутствие не обязательно. Работаем по нотариальной доверенности, чтобы вы могли заниматься своими делами, пока мы выигрываем ваше.</p>
-                </article>
-                <article class="case-card">
-                    <h3>Результат или Возврат Средств</h3>
-                    <p>Договор с гарантией. Если суд обяжет вернуть средства, в случае невыполнения обязательств, мы компенсируем вам стоимость наших юридических услуг.</p>
-                </article>
-            </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#contact" class="cta-button">Зафиксировать Цену и Гарантии</a>
-            </div>
-        </section>
+        <section id="advantages" style="background-color: var(--light-bg);">
+            <h2><i class="fas fa-check-circle"></i> Три Принципа Нашей Работы</h2>
+            <div class="case-studies-container">
+                <article class="case-card">
+                    <h3>Прозрачный Прайс и Гарантия</h3>
+                    <p>Конечная стоимость в договоре. Вы точно знаете, сколько и за что платите. Без скрытых доплат и неприятных сюрпризов.</p>
+                </article>
+                <article class="case-card">
+                    <h3>Экономия Времени и Нервов</h3>
+                    <p>Ваше присутствие не обязательно. Работаем по нотариальной доверенности, чтобы вы могли заниматься своими делами, пока мы выигрываем ваше.</p>
+                </article>
+                <article class="case-card">
+                    <h3>Результат или Возврат Средств</h3>
+                    <p>Договор с гарантией. Если суд обяжет вернуть средства, в случае невыполнения обязательств, мы компенсируем вам стоимость наших юридических услуг.</p>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#contact" class="cta-button">Зафиксировать Цену и Гарантии</a>
+            </div>
+        </section>
 
-        <section id="services">
-            <h2><i class="fas fa-gavel"></i> Специализация и Прозрачный Прайс</h2>
-            <p>Мы работаем на результат. Цена фиксируется после бесплатной консультации.</p>
+        <section id="services">
+            <h2><i class="fas fa-gavel"></i> Специализация и Прозрачный Прайс</h2>
+            <p>Мы работаем на результат. Цена фиксируется после бесплатной консультации.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Наименование услуг</th>
+                        <th>Цена* (руб.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Устная консультация (Онлайн/Офис)</td><td>Бесплатно</td></tr>
+                    <tr><td>2</td><td>Письменная консультация и анализ документов</td><td>1000</td></tr>
+                    <tr><td>3</td><td>Правовая экспертиза договоров и соглашений</td><td>2000</td></tr>
+                    <tr><td>4</td><td>Составление жалоб, претензий, досудебное урегулирование</td><td>3000-5000</td></tr>
+                    <tr><td>5</td><td>Составление договора/соглашения под ключ</td><td>5000</td></tr>
+                    <tr><td>6</td><td>Составление искового заявления с приложением</td><td>3000-5000</td></tr>
+                    <tr><td>7</td><td>Полное представление интересов в суде первой инстанции</td><td>20000-30000</td></tr>
+                    <tr><td>8</td><td>Сопровождение исполнительного производства</td><td>10000</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8em; color: #6c757d;">*Цены на юридические услуги указаны с учетом обычного уровня сложности дел. Точная стоимость фиксируется в договоре после анализа вашей ситуации.</p>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#contact" class="cta-button">Обсудить Мой Вопрос</a>
+            </div>
+        </section>
 
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Наименование услуг</th>
-                        <th>Цена* (руб.)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Устная консультация (Онлайн/Офис)</td><td>Бесплатно</td></tr>
-                    <tr><td>2</td><td>Письменная консультация и анализ документов</td><td>1000</td></tr>
-                    <tr><td>3</td><td>Правовая экспертиза договоров и соглашений</td><td>2000</td></tr>
-                    <tr><td>4</td><td>Составление жалоб, претензий, досудебное урегулирование</td><td>3000-5000</td></tr>
-                    <tr><td>5</td><td>Составление договора/соглашения под ключ</td><td>5000</td></tr>
-                    <tr><td>6</td><td>Составление искового заявления с приложением</td><td>3000-5000</td></tr>
-                    <tr><td>7</td><td>Полное представление интересов в суде первой инстанции (за все заседания)</td><td>20000-30000</td></tr>
-                    <tr><td>8</td><td>Сопровождение исполнительного производства (Служба приставов)</td><td>10000</td></tr>
-                </tbody>
-            </table>
-            
-            <p style="font-size: 0.8em; color: #6c757d;">*Цены на юридические услуги указаны с учетом обычного уровня сложности дел. Точная стоимость фиксируется в договоре после анализа вашей ситуации.</p>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#contact" class="cta-button">Обсудить Мой Вопрос</a>
-            </div>
-        </section>
+        <section id="cases" style="background-color: var(--light-bg); display: none;">
+            <h2><i class="fas fa-trophy"></i> Результаты, Которые Говорят Сами за Себя</h2>
+            <div class="case-studies-container">
+                <article class="case-card">
+                    <h3>Дело №1: Защита прав потребителя</h3>
+                    <p class="case-result">Результат: Взыскано 150 000 руб.</p>
+                </article>
+            </div>
+        </section>
 
-        <section id="cases" style="background-color: var(--light-bg);">
-            <h2><i class="fas fa-trophy"></i> Результаты, Которые Говорят Сами за Себя</h2>
-            <p>Практика — наше доказательство эффективности. Конкретика важнее пустых обещаний:</p>
+        <section id="education" style="background-color: #fff;">
+            <h2><i class="fas fa-user-graduate"></i> Образование и квалификация</h2>
+            <p>Профессионализм, подтвержденный дипломами ведущего ВУЗа региона. Наталья Владимировна — специалист с двумя высшими юридическими образованиями, полученными с отличием.</p>
+            
+            <div class="case-studies-container">
+                <article class="case-card">
+                    <img src="Диплом бакалавр_page-0001.jpg" alt="Диплом Бакалавра с отличием" class="doc-image">
+                    <h3>Бакалавриат с отличием</h3>
+                    <p><strong>ВУЗ:</strong> Алтайский государственный университет.</p>
+                    <p><strong>Направление:</strong> Юриспруденция.</p>
+                    <p class="case-result">Диплом с отличием.</p>
+                </article>
 
-            <div class="case-studies-container">
-                <article class="case-card">
-                    <h3>Дело №1: Защита прав потребителя</h3>
-                    <p class="case-result">Результат: Взыскано 150 000 руб. в пользу клиента за некачественный товар.</p>
-                    <p class="case-description">Проблема: Отказ магазина вернуть деньги за товар с заводским браком. Решение: Претензия, иск, успешное представление интересов в суде.</p>
-                </article>
-                <article class="case-card">
-                    <h3>Дело №2: Раздел имущества супругов</h3>
-                    <p class="case-result">Результат: Клиент получил 70% от совместно нажитого имущества, включая спорный объект недвижимости.</p>
-                    <p class="case-description">Проблема: Спор о долях при разводе. Решение: Сбор доказательств и заключение мирового соглашения с максимальной выгодой.</p>
-                </article>
-                <article class="case-card">
-                    <h3>Дело №3: Трудовой спор</h3>
-                    <p class="case-result">Результат: Восстановление клиента на работе и выплата компенсации за 3 месяца вынужденного прогула.</p>
-                    <p class="case-description">Проблема: Незаконное увольнение. Решение: Иск о восстановлении на работе и взыскании заработной платы.</p>
-                </article>
-            </div>
-        </section>
+                <article class="case-card">
+                    <img src="Магистр_page-0001.jpg" alt="Диплом Магистра с отличием" class="doc-image">
+                    <h3>Магистратура с отличием</h3>
+                    <p><strong>ВУЗ:</strong> Алтайский государственный университет.</p>
+                    <p><strong>Направление:</strong> Юриспруденция.</p>
+                    <p class="case-result">Диплом с отличием.</p>
+                </article>
+            </div>
+        </section>
 
-                <section id="about">
-            <h2><i class="fas fa-balance-scale"></i> Наш Подход. Мы — Юристы Нового Поколения.</h2>
-            
+        <section id="about" style="background-color: var(--light-bg);">
+            <h2><i class="fas fa-balance-scale"></i> Наш Подход </h2>
             <div class="about-content-container">
                 <img src="123.jpg" alt="Юрист за работой" class="about-image"> 
-
                 <p style="max-width: 800px; font-size: 1.1em; text-align: left;">
                     Наш принцип: Юрист должен решать проблему, а не создавать видимость работы.
                     <br><br>
-                    Мы не пытаемся "растянуть" процесс. Наша цель — максимально быстрое и выгодное для вас решение. Для нас юридическая практика — это чистая математика, а не бюрократия. Мы говорим на простом языке, объясняем каждый шаг и не беремся за бесперспективные дела. Вы платите только за результат, который можете получить, а не за наше потраченное время.
+                    Мы говорим на простом языке, объясняем каждый шаг и не беремся за бесперспективные дела. Вы платите только за результат, который можете получить, а не за наше потраченное время.
                 </p>
             </div>
-        </section>
-        
-        <section id="contacts" style="background-color: var(--light-bg);">
-            <h2><i class="fas fa-map-marker-alt"></i> Контакты и Связь</h2>
-            <p>Не откладывайте решение своей проблемы. Мы на связи в удобных для вас мессенджерах.</p>
-            <p>Телефон: +7 (983)600-35-91</p>
-            <p>Email: miller.359@mail.ru</p>
-            <p>Местонахождение: г. Барнаул и  Алтайский край</p>
+        </section>
+        
+        <section id="contacts">
+            <h2><i class="fas fa-map-marker-alt"></i> Контакты и Связь</h2>
+            <p>Телефон: +7 (983)600-35-91</p>
+            <p>Email: miller.359@mail.ru</p>
+            <p>г. Барнаул и Алтайский край</p>
+            <div class="social-links">
+                <a href="https://wa.me/79836003591" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://t.me/ВАШ_ЮЗЕРНЕЙМ_ТУТ" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="https://vk.com/club234577692" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+            </div>
 
-            <div class="social-links">
-                <a href="https://wa.me/79836003591" target="_blank" title="Написать в WhatsApp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://t.me/ВАШ_ЮЗЕРНЕЙМ_ТУТ" target="_blank" title="Написать в Telegram">
-    <i class="fab fa-telegram-plane"></i> Telegram
-</a>
-                </a>
-                <a href="https://vk.com/club234577692" target="_blank" title="Написать ВКонтакте">
-    <i class="fab fa-vk"></i> ВКонтакте
-</a>
-  
-            </div>
+            <div class="map-container" style="margin-top: 40px;">
+                <h3>Наш офис на карте</h3>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e31d4f938b29f0e014e7a8853b8118d047b30c9fa38c238b975e5330a1c6e1d&amp;source=constructor" width="100%" height="400" frameborder="0" allowfullscreen="true" style="border:0;" title="Яндекс.Карта г. Барнаул, ул. Взлётная, 23"></iframe>
+            </div>
+        </section>
 
-            
+        <section id="contact">
+            <h2>Оставьте заявку на бесплатный анализ дела</h2>
+            <form id="contact-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required> 
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="message">Ваш вопрос:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="cta-button" style="color: white; background-color: var(--primary-color);">Получить Анализ Дела</button>
+            </form>
+        </section>
+    </main>
 
-<div class="map-container" style="margin-top: 40px;">
-    <h3>Наш офис на карте</h3>
-    <iframe 
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e31d4f938b29f0e014e7a8853b8118d047b30c9fa38c238b975e5330a1c6e1d&amp;source=constructor" 
-        width="100%" 
-        height="400" 
-        frameborder="0" 
-        allowfullscreen="true" 
-        style="border:0;"
-        title="Яндекс.Карта г. Барнаул, ул. Взлётная, 23"
-    ></iframe>
-</div>
-                <p class="map-note" style="font-size: 0.8em;">Ждем наших встреч!</p>
-            </div>
-        </section>
+    <footer>
+        <p>© 2025 Юридический партнер. Все права защищены. <br> </p>
+    </footer>
 
-        <section id="contact">
-            <h2>Готовы начать? Оставьте заявку на бесплатный анализ дела</h2>
-            <p style="text-align: center;">Мы свяжемся с вами в течение 30 минут, чтобы дать четкий план действий и зафиксировать цену.</p>
-            <form id="contact-form">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required> 
-                
-                <label for="phone">Номер телефона:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="message">Ваш вопрос / Описание проблемы:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit" class="cta-button" style="color: white; background-color: var(--primary-color);">Получить Бесплатный Анализ Дела</button>
-            </form>
-        </section>
-    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Анимация появления секций
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 150) {
+                    section.classList.add('visible');
+                }
+            });
+        });
 
-    <footer>
-        <p>© 2025 Юридический партнер. Все права защищены. <br> Конфиденциальность и профессионализм — наш приоритет.</p>
-    </footer>
+        // EmailJS инициализация
+        (function() {
+            emailjs.init("ZesbRxMI5g0ZSYcEx"); 
+        })();
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                // Плавное появление, когда секция в области видимости
-                if (rect.top < window.innerHeight - 150) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <script>
-        (function() {
-            emailjs.init("ZesbRxMI5g0ZSYcEx"); // Замени на твой публичный ключ из EmailJS
-        })();
-
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            emailjs.sendForm('Legal_services.22', 'template_qmzsrxb', this) // Замени на твои SERVICE_ID и TEMPLATE_ID
-                .then(function(response) {
-                    alert('Сообщение отправлено успешно! Мы скоро с вами свяжемся.');
-                    console.log('SUCCESS!', response.status, response.text);
-                    document.getElementById('contact-form').reset();
-                }, function(error) {
-                    alert('Ошибка при отправке: Пожалуйста, попробуйте еще раз.');
-                    console.log('FAILED...', error);
-                });
-        });
-    </script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('Legal_services.22', 'template_qmzsrxb', this)
+                .then(function() {
+                    alert('Сообщение отправлено успешно!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alert('Ошибка при отправке.');
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
 </body>
 </html>
